@@ -1,4 +1,4 @@
-# 张馨允毕业设计之环境部署
+# 毕业设计之环境部署
 
 本项目基于 [Fabric](http://www.fabfile.org/) 实现了 *zhangxinyun-flask* 服务的远程部署
 
