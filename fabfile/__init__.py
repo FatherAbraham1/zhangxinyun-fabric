@@ -1,25 +1,16 @@
 from fabric.api import *
 
-import prepare_env
-import fab_flask
+import prepare
+import scrapy
+import flask
 
-env.hosts = ['192.168.1.104']
+env.hosts = ['192.168.1.103']
 env.user = 'anthony'
 env.password = '1'
 
+
+@task
 def init():
-    prepare_env.install_pip()
-    prepare_env.install_virtualenv()
-    prepare_env.install_git()
-
-def install():
-    fab_flask.git_clone()
-    fab_flask.create_virtualenv()
-    fab_flask.pip_install()
-
-def clean():
-    fab_flask.clean()
-
-def run():
-    fab_flask.runserver()
-        
+    install_git()
+    install_pip()
+    install_virtualenv()
